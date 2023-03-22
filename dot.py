@@ -19,3 +19,8 @@ print(b*a)
 print(a.shape) #(row,column)
 print(a.shape[0]) # row
 print(a.shape[1]) # column
+
+print("----------------------------")
+print(b*b)
+#print(dot(b,b)) #오류
+#print(b@b) #오류
