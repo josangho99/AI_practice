@@ -47,4 +47,15 @@ plt.plot(x_train, y_train, 'ro', label = 'data')
 plt.plot(x_train, predicted, label = 'linear funtion')
 plt.legend(loc='upper left')
 plt.show()
+
+print(model.state_dict())
+weight = model.state_dict()['weight'].item()
+bias = model.state_dict()['bias'].item()
+print(f'weight: {weight}, bias: {bias}')
+
+check_y = weight * x_train + bias
+plt.figure()
+plt.plot(x_train, y_train, 'ro', label='data')
+plt.plot(x_train, check_y, 'g-')
+plt.show()
 # %%
